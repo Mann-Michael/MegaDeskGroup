@@ -1,7 +1,7 @@
 [
   {
     "SelectedCustomerName": "Test",
-    "QuoteDate": "2019-02-07T20:32:57.8120823-06:00",
+    "QuoteDate": "2019-02-07T19:32:57.8120823-07:00",
     "QuotedDesk": {
       "Width": 27,
       "Depth": 14,
@@ -11,5 +11,18 @@
     "SelectedBuildOption": 5,
     "CalculatedSurfaceArea": 378,
     "QuotedFinalCost": 540
+  },
+  {
+    "SelectedCustomerName": "Test2/11",
+    "QuoteDate": "2019-02-11T21:38:12.4349502-07:00",
+    "QuotedDesk": {
+      "Width": 24,
+      "Depth": 12,
+      "CountDrawer": 0,
+      "SurfaceMaterial": "Oak"
+    },
+    "SelectedBuildOption": 3,
+    "CalculatedSurfaceArea": 288,
+    "QuotedFinalCost": 460
   }
 ]
