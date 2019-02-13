@@ -17,15 +17,4 @@ namespace MegaDesk2_OHaraMannAndrade
         public enum SurfaceMaterials { Oak, Laminate, Pine, Rosewood, Veneer }
 
     }
-
-    /*struct Desk
-    {
-        public int Width { get; set; }
-        public int Depth { get; set; }
-        public int CountDrawer { get; set; }
-        public string SurfaceMaterial { get; set; }
-
-        //Surface material enum
-        public enum SurfaceMaterials { Oak, Laminate, Pine, Rosewood, Veneer }
-    }*/
 }

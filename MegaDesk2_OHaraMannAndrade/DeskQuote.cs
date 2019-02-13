@@ -18,6 +18,7 @@ namespace MegaDesk2_OHaraMannAndrade
         public int SelectedBuildOption;
         public int CalculatedSurfaceArea;
         public int QuotedFinalCost;
+        private int[,] rushPrices = new int[3, 3];
         #endregion
 
         #region constants
@@ -127,6 +128,49 @@ namespace MegaDesk2_OHaraMannAndrade
             return QuotedDesk.CountDrawer * DRAWER_COST;
         }
 
+        ///<summary>
+        /// Read the rush order prices from a file and put it into a array 3x3
+        /// @author Ramon Andrade
+        /// @param void
+        /// @return void
+        ///</summary>
+        private void GetRushOrder()
+        {
+            try
+            {
+
+                // check if file exists
+                if (File.Exists(@"rushOrderPrices.txt"))
+                {
+                    //set initialJson to the text within the file
+                    string[] rushFile = System.IO.File.ReadAllLines(@"rushOrderPrices.txt");
+
+                    // init the array var
+                    int i, j;
+       
+                    // init the 3x3 array
+                    for (i = 0; i < 3; i++)
+                    {
+                        for (j = 0; j < 3; j++)
+                        {
+                            rushPrices[i, j] = Convert.ToInt32(rushFile[i+j]);
+                            Console.WriteLine(Convert.ToInt32(rushFile[i + j]));
+                        }
+                    }
+
+                }
+
+ 
+
+            }
+            catch (Exception ex)
+            {
+                //Display a window because the quote failed to save
+                Console.WriteLine(@"Failed to get the rush Prices:" + "\n" + ex.Message);
+            }
+
+
+        }
         private int CalcShippingCost()
         {
             /*calculate the shipping cost according to design below. 
@@ -142,6 +186,9 @@ namespace MegaDesk2_OHaraMannAndrade
                 i.  7 days and greater than 2000 sq. in.: $40
             */
 
+            // call function to get shipping prices
+            GetRushOrder();
+
             int shippingCost = 0;
 
             //These details will need to be filled out with a text file per week 5 assignment. 
@@ -150,43 +197,43 @@ namespace MegaDesk2_OHaraMannAndrade
                 case 3:
                     if (CalculatedSurfaceArea < 1000)
                     {
-                        shippingCost = 60;
+                        shippingCost = rushPrices[0, 0];
                     }
                     else if (CalculatedSurfaceArea >= 1000 && CalculatedSurfaceArea <= 2000)
                     {
-                        shippingCost = 70;
+                        shippingCost = rushPrices[0, 1];
                     }
                     else if (CalculatedSurfaceArea > 2000)
                     {
-                        shippingCost = 80;
+                        shippingCost = rushPrices[0, 2];
                     }
                         break;
                 case 5:
                     if (CalculatedSurfaceArea < 1000)
                     {
-                        shippingCost = 40;
+                        shippingCost = rushPrices[1, 0];
                     }
                     else if (CalculatedSurfaceArea >= 1000 && CalculatedSurfaceArea <= 2000)
                     {
-                        shippingCost = 50;
+                        shippingCost = rushPrices[1, 1];
                     }
                     else if (CalculatedSurfaceArea > 2000)
                     {
-                        shippingCost = 60;
+                        shippingCost = rushPrices[1, 2];
                     }
                     break;
                 case 7:
                     if (CalculatedSurfaceArea < 1000)
                     {
-                        shippingCost = 30;
+                        shippingCost = rushPrices[2, 0];
                     }
                     else if (CalculatedSurfaceArea >= 1000 && CalculatedSurfaceArea <= 2000)
                     {
-                        shippingCost = 35;
+                        shippingCost = rushPrices[2, 1];
                     }
                     else if (CalculatedSurfaceArea > 2000)
                     {
-                        shippingCost = 40;
+                        shippingCost = rushPrices[2, 2];
                     }
                     break;
                 default:
