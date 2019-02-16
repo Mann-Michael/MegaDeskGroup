@@ -38,9 +38,10 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(34, 344);
+            this.btnCancel.Location = new System.Drawing.Point(51, 529);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(145, 75);
+            this.btnCancel.Size = new System.Drawing.Size(218, 115);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -50,27 +51,30 @@
             // 
             this.cmbMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMaterial.FormattingEnabled = true;
-            this.cmbMaterial.Location = new System.Drawing.Point(166, 12);
+            this.cmbMaterial.Location = new System.Drawing.Point(249, 18);
+            this.cmbMaterial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbMaterial.Name = "cmbMaterial";
-            this.cmbMaterial.Size = new System.Drawing.Size(121, 28);
+            this.cmbMaterial.Size = new System.Drawing.Size(180, 37);
             this.cmbMaterial.TabIndex = 10;
             // 
             // lblMaterial
             // 
             this.lblMaterial.AutoSize = true;
             this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaterial.Location = new System.Drawing.Point(12, 9);
+            this.lblMaterial.Location = new System.Drawing.Point(18, 14);
+            this.lblMaterial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaterial.Name = "lblMaterial";
-            this.lblMaterial.Size = new System.Drawing.Size(148, 20);
+            this.lblMaterial.Size = new System.Drawing.Size(224, 29);
             this.lblMaterial.TabIndex = 11;
             this.lblMaterial.Text = "Search by Material: ";
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(185, 344);
+            this.btnSearch.Location = new System.Drawing.Point(278, 529);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(145, 75);
+            this.btnSearch.Size = new System.Drawing.Size(218, 115);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "&Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -79,21 +83,25 @@
             // lbQuotes
             // 
             this.lbQuotes.FormattingEnabled = true;
-            this.lbQuotes.Location = new System.Drawing.Point(12, 60);
+            this.lbQuotes.ItemHeight = 20;
+            this.lbQuotes.Location = new System.Drawing.Point(18, 92);
+            this.lbQuotes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lbQuotes.Name = "lbQuotes";
-            this.lbQuotes.Size = new System.Drawing.Size(776, 264);
+            this.lbQuotes.Size = new System.Drawing.Size(1162, 404);
             this.lbQuotes.TabIndex = 13;
+            //this.lbQuotes.SelectedIndexChanged += new System.EventHandler(this.lbQuotes_SelectedIndexChanged);
             // 
             // SearchQuotes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.lbQuotes);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblMaterial);
             this.Controls.Add(this.cmbMaterial);
             this.Controls.Add(this.btnCancel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SearchQuotes";
             this.Text = "SearchQuotes";
             this.ResumeLayout(false);

@@ -78,5 +78,6 @@ namespace MegaDesk2_OHaraMannAndrade
                 MessageBox.Show(@"Failed to find quotes!" + "\n" + ex.Message);
             }
         }
+
     }
 }
